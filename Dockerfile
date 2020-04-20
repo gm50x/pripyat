@@ -8,6 +8,13 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package*.json ./
 
+# Install PM2 in the container
+RUN npm install -g pm2
+
+# LINK pm2.io keys
+ENV PM2_PUBLIC_KEY <YOUR PUBLIC PM2 KEY>
+ENV PM2_SECRET_KEY <YOUR SECRET PM2 KEY>
+
 RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
@@ -16,4 +23,4 @@ RUN npm install
 COPY . .
 
 EXPOSE ${PORT}
-CMD [ "node", "index.js" ]
+CMD [ "pm2-runtime", "ecosystem.config.js"]

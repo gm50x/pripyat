@@ -15,6 +15,9 @@ services:
             PORT: ${PORT}
             DB_USER: ${DB_APP_USER}
             DB_PASS: ${DB_APP_PASS}
+            # SET LOCALLY TO KEEP THEM SAFE IN YOUR ENVIRONMENT AND NOT ON REPOSITORIES
+            PM2_PUBLIC_KEY: ${PM2_PUBLIC_KEY}
+            PM2_SECRET_KEY: ${PM2_SECRET_KEY}
         ports:
             - ${PUBLIC_PORT}:${PORT}
         container_name: 'pripyat-api'

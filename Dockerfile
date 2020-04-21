@@ -11,12 +11,11 @@ COPY package*.json ./
 # Install PM2 in the container
 RUN npm install -g pm2
 
-# LINK pm2.io keys
-ENV PM2_PUBLIC_KEY <YOUR PUBLIC PM2 KEY>
-ENV PM2_SECRET_KEY <YOUR SECRET PM2 KEY>
 
-RUN npm install
-# If you are building your code for production
+RUN if [ "$ENV" = "production" ] ; then npm ci ; else npm install ; fi
+
+# RUN npm install --only=development
+# # If you are building your code for production
 # RUN npm ci --only=production
 
 # Bundle app source

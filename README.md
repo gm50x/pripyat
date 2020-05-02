@@ -19,11 +19,14 @@ The main concern of this project is to learn more about this marvelous developme
                 Added env variables into the contaier
                 Added container communication
                 Added pm2 monitoring
+    
+    2020-05-02: Added API Template
+                Not-Found Module
+                Samples Module
+                System-Status Module
 
 ### NEXT STEPS:
-    Modular API Template
-    Data Persistency Module
-    Users or Authentication Module
-    Not-Found Module
-    Mocha and Tests
     CI/CD (GITHUB + HEROKU)
+    Input Validation (express-validator)
+    Database Connection
+    Mocha and Tests

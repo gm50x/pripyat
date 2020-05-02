@@ -15,7 +15,6 @@ module.exports = class SamplesRouter {
     _init() {
         this.router.addRoute('GET', '', new GetAllSamples())
         this.router.addRoute('GET', ':id', new GetSampleById())
-
     }
 
     getRoutes() {

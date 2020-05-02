@@ -1,10 +1,15 @@
 const morgan = require('morgan')
 
 module.exports = class MorganLogger {
-    constructor() { }
+    constructor() {
+        this._init()
+    }
+
+    _init() {
+        morgan.token('timestamp', req => req.headers.timestamp.toString().slice(0, 24) + ' >')
+    }
 
     middleware(req, res, next) {
-        morgan.token('timestamp', req => req.headers.timestamp)
         return morgan(':timestamp :method :url :status :response-time ms')
     }
 }

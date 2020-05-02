@@ -6,6 +6,7 @@ const { ErrorHandler, RequestTimestamp, MorganLogger } = Core.Middlewares
 const { Router } = Core.Router
 const { NotFoundRouter } = Components.NotFound
 const { SamplesRouter } = Components.Samples
+const { SystemStatusRouter } = Components.SystemStatus
 
 module.exports = class App {
     constructor() {
@@ -21,6 +22,7 @@ module.exports = class App {
         this.app.use(this.requestTimestamp)
         this.app.use(this.logger())
         this.router.addModule(new SamplesRouter('samples'))
+        this.router.addModule(new SystemStatusRouter('system-status'))
         this.router.addModule(new NotFoundRouter())
         this.app.use(this.router.getRoutes())
         this.app.use(this.errorHandler)

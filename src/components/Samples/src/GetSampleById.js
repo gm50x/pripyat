@@ -10,7 +10,7 @@ module.exports = class GetSampleById {
         const id = Number(req.params.id)
 
         if (!id) {
-            throw new BadRequestError({ params: ['id'] })
+            throw new BadRequestError(['id'])
         }
 
         const result = await this.service.getSampleById(id)

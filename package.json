@@ -7,7 +7,7 @@
     "start":"pm2-runtime index.js",
     "start-node": "node index.js",
     "dev": "nodemon index.js",
-    "test": "mocha src/test --recursive"
+    "test": "mocha src --recursive"
   },
   "keywords": [],
   "author": "",

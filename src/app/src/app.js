@@ -33,8 +33,8 @@ module.exports = class App {
         this.app.use(new ErrorHandler().middleware)
     }
 
-    start(port = 8000) {
-        this.app.listen(port, () => console.log(`Server is listening on ${port}`))
+    start(port = 8000, env = 'DEVELOPMENT') {
+        this.app.listen(port, () => console.log(`Server is runnin on ${env} mode and listening on ${port}.`))
     }
 }
 

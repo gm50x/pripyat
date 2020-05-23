@@ -9,6 +9,6 @@ module.exports = class TimeRouter extends BaseRouter {
     }
 
     _init() {
-        this.addRoute('GET', '', new GetCurrentTime)
+        this.addRoute('GET', '', new GetCurrentTime())
     }
 }

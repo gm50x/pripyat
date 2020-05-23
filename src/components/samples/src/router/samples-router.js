@@ -1,8 +1,7 @@
 
 const { BaseRouter } = require('../../../../core/base')
 
-const GetSamples = require('../handlers/get-samples')
-const GetSamplesById = require('../handlers/get-sample-by-id')
+const DependencyContainer = require('../dependency-container/dependency-container')
 
 module.exports = class SamplesRouter extends BaseRouter {
     constructor(basePath) {
@@ -11,7 +10,7 @@ module.exports = class SamplesRouter extends BaseRouter {
     }
 
     _init() {
-        super.addRoute('GET', '', new GetSamples())
-        super.addRoute('GET', ':id', new GetSamplesById())
+        super.addRoute('GET', '', new DependencyContainer().GetSamples)
+        super.addRoute('GET', ':id', new DependencyContainer().GetSamplesById)
     }
 }

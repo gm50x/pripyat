@@ -1,8 +1,8 @@
 const SamplesRepository = require('../data/samples-repository')
 
 module.exports = class SamplesService {
-    constructor() {
-        this.repository = new SamplesRepository()
+    constructor({ repository }) {
+        this.repository = repository
     }
 
     async getAllSamples() {

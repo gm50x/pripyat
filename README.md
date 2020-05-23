@@ -44,6 +44,7 @@ You can also run it in development mode by using nodemon
     2020-05-23: Switched to a simpler version of the architecture
                 Removed System-Status Module (Will be re-added later)
                 Started the development of the tests
+                Super Simple Inversion of Control with Oversimplified Dependency Container
 
 ### STATUS
     [x] Docker Container Support
@@ -56,6 +57,7 @@ You can also run it in development mode by using nodemon
     [x] Error Samples Module
     [x] Not Found Module
     [ ] System Status Module
+    [x] Self Contained Module with Inversion of Control
     [x] Timer Module
     [-] CI/CD (GITHUB + HEROKU)
     [ ] Input Validation (express-validator)

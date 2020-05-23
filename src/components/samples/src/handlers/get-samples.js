@@ -1,15 +1,13 @@
 const { BaseUseCase } = require('../../../../core/base')
 
-const SamplesRepository = require('../data/samples-repository')
-
 module.exports = class GetSamples extends BaseUseCase {
-    constructor() {
+    constructor({ service }) {
         super()
-        this.repository = new SamplesRepository()
+        this.service = service
     }
 
     handle = async (req, res) => {
-        const data = await this.repository.getAll()
+        const data = await this.service.getAllSamples()
         return res.status(200).json(data)
     }
 

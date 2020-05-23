@@ -1,5 +1,4 @@
 const { BaseUseCase } = require('../../../../core/base')
-
 const SamplesRepository = require('../data/samples-repository')
 
 module.exports = class AddSample extends BaseUseCase {

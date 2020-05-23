@@ -25,8 +25,24 @@ The main concern of this project is to learn more about this marvelous developme
                 Samples Module
                 System-Status Module
 
-### NEXT STEPS:
-    CI/CD (GITHUB + HEROKU)
-    Input Validation (express-validator)
-    Database Connection
-    Mocha and Tests
+    2020-05-23: Switched to a simpler version of the architecture
+                Removed Not-Found Module (Will be re-added later)
+                Removed System-Status Module (Will be re-added later)
+                Started the development of the tests
+
+### STATUS
+    [x] Docker Container Support
+    [x] Container Communication
+    [x] Container Environment Variables
+    [x] PM2 Monitoring
+    [x] API Template
+    [x] Self Contained Modules
+    [x] Samples Module
+    [x] Error Samples Module
+    [ ] System Status Module
+    [x] Timer Module
+    [-] CI/CD (GITHUB + HEROKU)
+    [ ] Input Validation (express-validator)
+    [ ] Database Connection
+    [-] Mocha and Tests
+    [x] Simpler Architecture

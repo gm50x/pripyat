@@ -7,6 +7,7 @@ const { ErrorHandler } = require('../../core/middlewares')
 const { TimeRouter } = require('../../components/current-time')
 const { SamplesRouter } = require('../../components/samples')
 const { ErrorSamplesRouter } = require('../../components/error-samples')
+const { NotFoundRouter } = require('../../components/not-found')
 
 const AppRouter = require('./app-router')
 
@@ -26,6 +27,8 @@ module.exports = class App {
         this.router.addModule(new SamplesRouter('samples'))
         this.router.addModule(new ErrorSamplesRouter('error'))
 
+        this.router.addModule(new NotFoundRouter('*'))
+        
         this.app.use(this.router.getRoutes())
         this.app.use(new ErrorHandler().middleware)
     }

@@ -4,7 +4,7 @@ const { AsyncWrapper } = require('../../middlewares')
 
 module.exports = class BaseRouter {
     constructor(basePath = '') {
-        this._routes = ExpressRouter()
+        this._routes = process.env.NODE_ENV === 'TEST_RUNNER' ? [] : ExpressRouter()
         this.basePath = basePath
         this.asyncWrapper = new AsyncWrapper().wrap
     }

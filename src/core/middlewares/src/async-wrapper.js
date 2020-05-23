@@ -1,4 +1,4 @@
-module.exports = class AsyncHandler {
+module.exports = class AsyncWrapper {
     constructor() { }
 
     wrap = handler =>

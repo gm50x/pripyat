@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "mocha tests --recursive"
+    "test": "NODE_ENV=TEST_RUNNER mocha src tests --recursive"
   },
   "keywords": [],
   "author": "",

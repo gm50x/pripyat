@@ -1,4 +1,4 @@
 module.exports = {
-    BaseUseCase: require('./src/BaseUseCase'),
-    BaseRouter: require('./src/BaseRouter')
+    BaseUseCase: require('./src/base-use-case'),
+    BaseRouter: require('./src/base-router')
 }

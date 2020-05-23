@@ -22,7 +22,7 @@ module.exports = class App {
     }
 
     start(port = 8000, env = 'DEVELOPMENT') {
-        this.app.listen(port, () => console.log(`Server is runnin on ${env} mode and listening on ${port}.`))
+        this.app.listen(port, () => console.log(`Server is running in ${env} mode on port ${port}.`))
     }
 }
 

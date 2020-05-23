@@ -58,6 +58,7 @@ You can also run it in development mode by using nodemon
     [x] Not Found Module
     [ ] System Status Module
     [x] Self Contained Module with Inversion of Control
+    [!] Expose Services and Repositories through Dependency Container, not directly.
     [x] Timer Module
     [-] CI/CD (GITHUB + HEROKU)
     [ ] Input Validation (express-validator)

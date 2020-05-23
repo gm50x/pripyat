@@ -1,6 +1,6 @@
 const { BaseRouter } = require('../../../../core/base')
 
-const GetCurrentTime = require('../handlers/get-current-time')
+const DependencyContainer = require('../dependency-container/dependency-container')
 
 module.exports = class TimeRouter extends BaseRouter {
     constructor(basePath) {
@@ -9,6 +9,6 @@ module.exports = class TimeRouter extends BaseRouter {
     }
 
     _init() {
-        this.addRoute('GET', '', new GetCurrentTime())
+        this.addRoute('GET', '', new DependencyContainer().GetCurrentTime)
     }
 }

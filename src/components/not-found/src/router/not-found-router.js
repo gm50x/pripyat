@@ -9,6 +9,6 @@ module.exports = class NotFoundRouter extends BaseRouter {
     }
 
     _init() {
-        this.addRoute('ALL', '', new RouteNotFound())
+        this.addRoute('ALL', '', new RouteNotFound({}))
     }
 }

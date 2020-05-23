@@ -1,8 +1,8 @@
-const SamplesRepository = require('../data/samples-repository')
+const { BaseService } = require('../../../../core/base')
 
-module.exports = class SamplesService {
-    constructor({ repository }) {
-        this.repository = repository
+module.exports = class SamplesService extends BaseService {
+    constructor(di) {
+        super(di)
     }
 
     async getAllSamples() {
@@ -12,5 +12,9 @@ module.exports = class SamplesService {
     async getSampleById(id) {
         return (await this.repository.getAll())
             .find(k => k.id === id)
+    }
+
+    async addSample(sample) {
+        this.repository.add(sample)
     }
 }

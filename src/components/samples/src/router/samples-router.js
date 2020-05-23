@@ -11,6 +11,7 @@ module.exports = class SamplesRouter extends BaseRouter {
 
     _init() {
         super.addRoute('GET', '', new DependencyContainer().GetSamples)
+        super.addRoute('POST', '', new DependencyContainer().AddSample)
         super.addRoute('GET', ':id', new DependencyContainer().GetSamplesById)
     }
 }

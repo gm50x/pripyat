@@ -1,11 +1,8 @@
 const { BaseUseCase } = require('../../../../core/base')
 
-const TimeService = require('../services/time-service')
-
 module.exports = class GetCurrentTime extends BaseUseCase {
-    constructor() {
-        super()
-        this.service = new TimeService()
+    constructor(di) {
+        super(di)
     }
 
     handle = async (req, res) => {

@@ -1,9 +1,8 @@
 const { BaseUseCase } = require('../../../../core/base')
 
 module.exports = class GetSamples extends BaseUseCase {
-    constructor({ service }) {
-        super()
-        this.service = service
+    constructor(di) {
+        super(di)
     }
 
     handle = async (req, res) => {

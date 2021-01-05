@@ -1,6 +1,4 @@
 module.exports = {
-    RequestTimestamp: require('./src/RequestTimestamp'),
-    AsyncHandler: require('./src/AsyncHandler'),
-    ErrorHandler: require('./src/ErrorHandler'),
-    MorganLogger: require('./src/MorganLogger')
+    AsyncWrapper: require('./src/async-wrapper'),
+    ErrorHandler: require('./src/error-handler')
 }

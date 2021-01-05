@@ -1,5 +1,6 @@
 module.exports = {
-    Samples: require('./Samples'),
-    NotFound: require('./NotFound'),
-    SystemStatus: require('./SystemStatus')
+    Samples: require('./samples'),
+    CurrentTime: require('./current-time'),
+    ErrorSamples: require('./error-samples'),
+    NotFound: require('./not-found')
 }

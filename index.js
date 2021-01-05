@@ -1,6 +1,6 @@
-const { App } = require('./src')
+const { App } = require('./src/app')
 
-const PORT = process.env.PORT || 8000
+const { PORT, NODE_ENV } = process.env
 
 const app = new App()
-app.start(PORT)
+app.start(PORT, NODE_ENV)
